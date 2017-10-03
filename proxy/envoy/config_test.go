@@ -233,7 +233,7 @@ var (
 
 	timeoutRouteRule = fileConfig{
 		meta: model.ConfigMeta{Type: model.RouteRule.Type, Name: "timeout"},
-		file: "testdata/timeout-route-rule.yaml.golden",
+		file: "testdata/timeout-routerule.yaml.golden",
 	}
 
 	weightedRouteRule = fileConfig{
@@ -273,7 +273,7 @@ var (
 
 	egressRuleTimeoutRule = fileConfig{
 		meta: model.ConfigMeta{Type: model.RouteRule.Type, Name: "egress-timeout"},
-		file: "testdata/egressrule-timeout-route-rule.yaml.golden",
+		file: "testdata/egressrule-timeout-routerule.yaml.golden",
 	}
 
 	ingressRouteRule1 = fileConfig{

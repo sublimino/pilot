@@ -277,8 +277,8 @@ var (
 
 	// RouteRule describes route rules
 	RouteRule = ProtoSchema{
-		Type:        "route-rule",
-		Plural:      "route-rules",
+		Type:        "routerule",
+		Plural:      "routerules",
 		MessageName: "istio.proxy.v1.config.RouteRule",
 		Validate:    ValidateRouteRule,
 	}
