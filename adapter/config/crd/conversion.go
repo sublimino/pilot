@@ -19,6 +19,7 @@ import (
 	"fmt"
 	"io"
 	"reflect"
+	"regexp"
 	"strings"
 
 	"github.com/golang/glog"
@@ -82,17 +83,25 @@ func KabobCaseToCamelCase(s string) string {
 	for _, word := range words {
 		out = out + strings.Title(word)
 	}
+	r, _ := regexp.Compile(`^([^-]*?)rule(.*)$`)
+	out = r.ReplaceAllString(out, "${1}Rule${2}")
+	r, _ = regexp.Compile(`^([^-]*?)policy(.*)$`)
+	out = r.ReplaceAllString(out, "${1}Policy${2}")
 	return out
 }
 
 // CamelCaseToKabobCase converts "MyName" to "my-name"
 func CamelCaseToKabobCase(s string) string {
 	var out bytes.Buffer
+	var capitalLetterCount = 0
 	for i := range s {
 		if 'A' <= s[i] && s[i] <= 'Z' {
-			if i > 0 {
+			if capitalLetterCount < 2 {
+				capitalLetterCount++
+			} else if i > 0 {
 				out.WriteByte('-')
 			}
+
 			out.WriteByte(s[i] - 'A' + 'a')
 		} else {
 			out.WriteByte(s[i])

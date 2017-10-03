@@ -24,9 +24,16 @@ import (
 
 var (
 	camelKabobs = []struct{ in, out string }{
-		{"ExampleNameX", "example-name-x"},
-		{"Example1", "example1"},
-		{"ExampleXY", "example-x-y"},
+		{"RouteRule", "routerule"},
+		{"IngressRule", "ingressrule"},
+		{"EgressRule", "egressrule"},
+		{"EgressRule1", "egressrule1"},
+		{"EgressRuleX", "egressrule-x"},
+		{"EgressRuleXY", "egressrule-x-y"},
+		{"DestinationPolicy", "destinationpolicy"},
+		{"DestinationPolicy1", "destinationpolicy1"},
+		{"DestinationPolicyX", "destinationpolicy-x"},
+		{"DestinationPolicyXY", "destinationpolicy-x-y"},
 	}
 )
 
