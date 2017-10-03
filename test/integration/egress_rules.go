@@ -30,7 +30,7 @@ type egressRules struct {
 }
 
 func (t *egressRules) String() string {
-	return "egress-rules"
+	return "egressrules"
 }
 
 func (t *egressRules) setup() error {
@@ -51,35 +51,35 @@ func (t *egressRules) run() error {
 	}{
 		{
 			description: "allow external traffic to httbin.org",
-			config:      "egress-rule-httpbin.yaml.tmpl",
+			config:      "egressrule-httpbin.yaml.tmpl",
 			check: func() error {
 				return t.verifyReachable("http://httpbin.org/headers", true)
 			},
 		},
 		{
 			description: "prohibit https to httbin.org",
-			config:      "egress-rule-httpbin.yaml.tmpl",
+			config:      "egressrule-httpbin.yaml.tmpl",
 			check: func() error {
 				return t.verifyReachable("http://httpbin.org:443/headers", false)
 			},
 		},
 		{
 			description: "prohibit external traffic to cloud.google.com",
-			config:      "egress-rule-httpbin.yaml.tmpl",
+			config:      "egressrule-httpbin.yaml.tmpl",
 			check: func() error {
 				return t.verifyReachable("http://cloud.google.com:443", false)
 			},
 		},
 		{
 			description: "allow https external traffic to *google.com",
-			config:      "egress-rule-google.yaml.tmpl",
+			config:      "egressrule-google.yaml.tmpl",
 			check: func() error {
 				return t.verifyReachable("http://cloud.google.com:443", true)
 			},
 		},
 		{
 			description: "prohibit http external traffic to *google.com",
-			config:      "egress-rule-google.yaml.tmpl",
+			config:      "egressrule-google.yaml.tmpl",
 			check: func() error {
 				return t.verifyReachable("http://cloud.google.com", false)
 			},

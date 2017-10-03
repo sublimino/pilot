@@ -263,17 +263,17 @@ var (
 
 	egressRule = fileConfig{
 		meta: model.ConfigMeta{Type: model.EgressRule.Type, Name: "google"},
-		file: "testdata/egress-rule.yaml.golden",
+		file: "testdata/egressrule.yaml.golden",
 	}
 
 	egressRuleCBPolicy = fileConfig{
 		meta: model.ConfigMeta{Type: model.DestinationPolicy.Type, Name: "egress-circuit-breaker"},
-		file: "testdata/egress-rule-cb-policy.yaml.golden",
+		file: "testdata/egressrule-cb-policy.yaml.golden",
 	}
 
 	egressRuleTimeoutRule = fileConfig{
 		meta: model.ConfigMeta{Type: model.RouteRule.Type, Name: "egress-timeout"},
-		file: "testdata/egress-rule-timeout-route-rule.yaml.golden",
+		file: "testdata/egressrule-timeout-route-rule.yaml.golden",
 	}
 
 	ingressRouteRule1 = fileConfig{
