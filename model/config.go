@@ -301,7 +301,7 @@ var (
 
 	// DestinationPolicy describes destination rules
 	DestinationPolicy = ProtoSchema{
-		Type:        "destination-policy",
+		Type:        "destinationpolicy",
 		Plural:      "destination-policies",
 		MessageName: "istio.proxy.v1.config.DestinationPolicy",
 		Validate:    ValidateDestinationPolicy,
