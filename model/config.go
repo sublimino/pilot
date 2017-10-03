@@ -264,8 +264,8 @@ const (
 var (
 	// MockConfig is used purely for testing
 	MockConfig = ProtoSchema{
-		Type:        "mock-config",
-		Plural:      "mock-configs",
+		Type:        "mockconfig",
+		Plural:      "mockconfigs",
 		MessageName: "test.MockConfig",
 		Validate: func(config proto.Message) error {
 			if config.(*test.MockConfig).Key == "" {

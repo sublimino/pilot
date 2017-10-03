@@ -75,7 +75,7 @@ var (
 
 // Make creates a mock config indexed by a number
 func Make(namespace string, i int) model.Config {
-	name := fmt.Sprintf("%s%d", "mock-config", i)
+	name := fmt.Sprintf("%s%d", "mockconfig", i)
 	return model.Config{
 		ConfigMeta: model.ConfigMeta{
 			Type:      model.MockConfig.Type,

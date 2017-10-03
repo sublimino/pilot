@@ -199,7 +199,7 @@ func TestLabelsEquals(t *testing.T) {
 
 func TestConfigKey(t *testing.T) {
 	config := mock.Make("ns", 2)
-	want := "mock-config/ns/mock-config2"
+	want := "mockconfig/ns/mockconfig2"
 	if key := config.ConfigMeta.Key(); key != want {
 		t.Errorf("config.Key() => got %q, want %q", key, want)
 	}
