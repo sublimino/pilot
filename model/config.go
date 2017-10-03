@@ -31,7 +31,7 @@ import (
 // last update operation on the object.
 type ConfigMeta struct {
 	// Type is a short configuration name that matches the content message type
-	// (e.g. "route-rule")
+	// (e.g. "routerule")
 	Type string `json:"type,omitempty"`
 
 	// Name is a unique immutable identifier in a namespace
@@ -293,8 +293,8 @@ var (
 
 	// EgressRule describes egress rule
 	EgressRule = ProtoSchema{
-		Type:        "egress-rule",
-		Plural:      "egress-rules",
+		Type:        "egressrule",
+		Plural:      "egressrules",
 		MessageName: "istio.proxy.v1.config.EgressRule",
 		Validate:    ValidateEgressRule,
 	}
@@ -510,7 +510,7 @@ func RejectConflictingEgressRules(egressRules map[string]*proxyconfig.EgressRule
 	sort.Strings(keys)
 
 	// domains - a map where keys are of the form domain:port and values are the keys of
-	// egress-rule configuration objects
+	// egressrule configuration objects
 	domains := make(map[string]string)
 	for _, egressRuleKey := range keys {
 		egressRule := egressRules[egressRuleKey]

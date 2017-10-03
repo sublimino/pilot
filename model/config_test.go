@@ -442,7 +442,7 @@ func TestEgressRules(t *testing.T) {
 	}
 
 	want := map[string]*proxyconfig.EgressRule{
-		"egress-rule/default/example": rule,
+		"egressrule/default/example": rule,
 	}
 	got := store.EgressRules()
 	if !reflect.DeepEqual(got, want) {

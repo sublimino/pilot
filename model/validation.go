@@ -828,7 +828,7 @@ func ValidateEgressRule(msg proto.Message) error {
 	return errs
 }
 
-//ValidateEgressRuleDestination checks that valid destination is used for an egress-rule
+//ValidateEgressRuleDestination checks that valid destination is used for an egressrule
 // only service field is allowed, all other fields are forbidden
 func ValidateEgressRuleDestination(destination *proxyconfig.IstioService) error {
 	if destination == nil {

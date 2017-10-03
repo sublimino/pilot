@@ -356,7 +356,7 @@ func TestSidecarListenerDiscovery(t *testing.T) {
 			file: faultRouteRule,
 		},
 		{
-			name: "egress-rule",
+			name: "egressrule",
 			file: egressRule,
 		},
 	}
