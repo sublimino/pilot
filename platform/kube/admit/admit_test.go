@@ -70,7 +70,7 @@ func makeConfig(t *testing.T, namespace string, i int, valid bool) []byte {
 	if valid {
 		key = "key"
 	}
-	name := fmt.Sprintf("%s%d", "mock-config", i)
+	name := fmt.Sprintf("%s%d", "mockconfig", i)
 	config := model.Config{
 		ConfigMeta: model.ConfigMeta{
 			Type:      model.MockConfig.Type,
@@ -241,7 +241,7 @@ func TestAdmissionController(t *testing.T) {
 
 		got := testAdmissionController.admit(c.in)
 		if got.Allowed != c.want.Allowed {
-			t.Errorf("%v: AdmissionReviewStatus.Allowed is wrong : got %v want %v",
+			t.Errorf("test '%v': AdmissionReviewStatus.Allowed is wrong : got %v want %v",
 				c.name, got.Allowed, c.want.Allowed)
 		}
 	}
