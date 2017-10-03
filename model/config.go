@@ -285,8 +285,8 @@ var (
 
 	// IngressRule describes ingress rules
 	IngressRule = ProtoSchema{
-		Type:        "ingress-rule",
-		Plural:      "ingress-rules",
+		Type:        "ingressrule",
+		Plural:      "ingressrules",
 		MessageName: "istio.proxy.v1.config.IngressRule",
 		Validate:    ValidateIngressRule,
 	}
